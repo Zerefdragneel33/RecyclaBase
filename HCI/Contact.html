@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQUANOVA Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* General Reset */
+    body {
+      background-color: #e0f1ef;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      color: #206153;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #bdd7ca;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .brand-name {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .logo img {
+      height: 100px;
+      width: 100px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      font-weight: bold;
+      margin: 10px;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      color: #fff;
+      background: linear-gradient(45deg, #3b7a67, #206153);
+      transition: all 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #206153;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #b7d1ce;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .burger {
+        display: flex;
+      }
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .form-container {
+      flex: 1;
+      max-width: 600px;
+      margin-right: 20px;
+    }
+
+    .form-container h2 {
+      color: #206153;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #206153;
+      outline: none;
+    }
+
+    form textarea {
+      height: 100px;
+    }
+
+    form button {
+      background-color: #b7d1ce;
+      color: #206153;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #206153;
+      color: #fff;
+    }
+
+    .info-container {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .info-container a {
+      font-weight: bold;
+    }
+
+    /* Updated Paragraph and Link Styling */
+    .info-container p {
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .facebook-link {
+      display: flex;
+      align-items: center;
+      background-color: #eaf4f2;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #206153;
+      font-size: 1.2rem;
+      width: fit-content;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .facebook-link img {
+      margin-right: 12px;
+      width: 24px;
+    }
+
+    .facebook-link:hover {
+      background-color: #206153;
+      color: #fff;
+      border-color: #206153;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-container,
+      .info-container {
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .info-container {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Screenshot__5_-removebg-preview (1).png" alt="AQUANOVA Logo">
+      <h1 class="brand-name">AQUANOVA</h1>
+    </div>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="menu">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Features.html">Features</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <!-- Form Section -->
+    <div class="form-container">
+      <h2>Get in touch with our creator-friendly support team</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message us" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="form-feedback" style="margin-top: 10px;"></div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-container">
+      <p>If you want to learn more about our startup, feel free to message us. We are never too busy to answer your question.</p>
+      <p>Visit our Facebook page:</p>
+      <a class="facebook-link" href="https://web.facebook.com/profile.php?id=61567549543846" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Aquanova
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+
+    // Handle form submission and validation
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const feedback = document.getElementById('form-feedback');
+
+      if (name && email && message) {
+        feedback.innerHTML = "<span style='color: green;'>Thank you for reaching out! We'll get back to you soon.</span>";
+        feedback.style.color = "green";
+      } else {
+        feedback.innerHTML = "<span style='color: red;'>Please fill in all fields before submitting.</span>";
+        feedback.style.color = "red";
+      }
+
+      // Clear the form
+      document.getElementById('contact-form').reset();
+    });
+  </script>
+</body>
+</html>

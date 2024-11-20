@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQUANOVA - RecyclaBase</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f3ed;
+}
+
+.header {
+    font-weight: bold;
+        color: #3b7a67;
+        background-color: #bdd7ca;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+   /* Main Content */
+   .main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.main-container h3 {
+    text-decoration: none;
+    font-weight: bold;
+   
+}
+.main-container a {
+  font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+.main-container button h3:hover {
+    text-decoration: none;
+    background-color: white;
+    
+    
+}
+
+
+.content {
+  flex: 1;
+  max-width: 400px;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1d6355;
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn {
+      background-color: #6fbfa3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .learn-more-btn:hover {
+      background-color: #5aa18b;
+      transform: translateY(-2px);
+    }
+
+.phone-container {
+    position: relative;
+    margin-right: 250px;
+    width:345px;
+    height: 400px;
+}
+
+.phone {
+    position: absolute;
+    width: 80px;
+  
+    
+}
+.cta-button button a{
+    text-decoration:  none;
+    color: black;
+}
+
+.phone.center {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.phone.left {
+    left: 0;
+    top: 20px;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+.phone.right {
+    right: 0;
+    top: 20px;
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+.phone img {
+    width: 200px;
+    height:auto;
+    
+    
+}
+
+
+
+.cta-button {
+    margin-top: 20px;
+ 
+
+}
+
+.cta-button button {
+    
+    background-color: #b8d9c7;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.cta-button button:hover {
+    background-color: aquamarine;
+
+}
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px  #3b7a67, 0 0 10px  #3b7a67, 0 0 15px #3b7a67;
+    }
+    50% {
+        box-shadow: 0 0 20px  #3b7a67, 0 0 30px  #3b7a67, 0 0 40px  #3b7a67;
+    }
+    100% {
+        box-shadow: 0 0 5px  #3b7a67, 0 0 10px  #3b7a67, 0 0 15px  #3b7a67;
+    }
+}
+@keyframes flipIn {
+    0% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.phone img {
+    animation: flipIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.learn-more-btn {
+    animation: glowPulse 1.5s infinite alternate;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #bdd7ca;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100px;
+}
+
+    .content {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .intro-text {
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: -5px;
+    }
+
+    .phone-container {
+        width: 280px;
+        height: auto;
+    }
+}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="Screenshot__5_-removebg-preview (1).png" alt="AQUANOVA Logo" class="logo">
+      <h1 class="brand-name">AQUANOVA</h1>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="content">
+      <h2>Join us in building a sustainable future with RecyclaBase waste management system.</h2>
+      <p class="quote">"Every action counts, make your mark by keeping our coastal clean"</p>
+       <button class="learn-more-btn"><a href="About.html">Learn More</a></button>
+    </section>
+
+    <div class="phone-container">
+      <div class="phone left">
+          <img src="Frame 2 (1).png" alt="Phone Screen 1" />
+      </div>
+      <div class="phone center">
+          <img src="Frame 1 (1).png" alt="Phone Screen 2" />
+      </div>
+      <div class="phone right">
+          <img src="Frame 3 (1).png" alt="Phone Screen 3" />
+      </div>
+  </div>
+</div>
+</body>
+</html>

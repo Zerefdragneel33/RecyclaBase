@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecycleBase</title>
+  <style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* General styles */
+    body {
+    background-color: #e6f3ed;;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+        font-weight: bold;
+        color: #3b7a67;
+        background-color: #bdd7ca;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1{
+        font-size: 1.5rem;
+      color: #206153;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+
+    }
+
+    header .logo img {
+     height: 100px;
+    width: 100px;
+    }
+
+    header nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    header nav a {
+    font-weight: bold;
+     margin: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #3b7a67, #206153);
+    transition: all 0.3s ease-in-out;
+  }
+
+   header nav a:hover {
+    color: #206153;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .burger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+  .burger-menu div {
+      height: 3px;
+      background: #333;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+   /* Paragraph styles */
+   .container h2{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #3b7a67;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
+   }
+   .container h1{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #3b7a67;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+   }
+.container p {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    background: #f5f9f7;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.container p:hover {
+    background-color: #e3f4e8;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #206153;
+}
+
+.container p::before {
+    content: "🌿";
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.container p::after {
+    content: "🌱";
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.tittle h2 {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #3b7a67;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #b7d1ce;;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+        
+      }
+
+      header nav.active {
+        display: flex;
+      }
+
+      .burger-menu {
+        display: flex;
+      }
+      header nav a:hover{
+        color: white;
+      background-color: #206153;
+    }
+    header nav a {
+        margin: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="Screenshot__5_-removebg-preview (1).png" alt="Logo">
+          <h1>AQUANOVA</h1>
+        </div>
+        <nav>
+          <a href="Home.html">Home</a>
+          <a href="About.html">About</a>
+          <a href="Features.html">Features</a>
+          <a href="Contact.html">Contact us</a>
+        </nav>
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </header>
+      
+      <div class="container">
+        <h1>About <span>RecyclaBase</span></h1>
+        <p><span>RecyclaBase</span> is a web-based system designed to help communities track, manage, 
+          and reduce waste. Collaborating with local government units (LGUs), non-governmental 
+          organizations (NGOs), and coastal communities, we deliver tools for effective waste 
+          management. Join us in creating a sustainable future for all.</p>
+      
+        <h2>Our Mission</h2>
+        <p><span>RecyclaBase</span> is driven by the vision of cleaner coastlines and sustainable 
+          communities. Through innovative waste management solutions, we tackle plastic pollution 
+          while empowering communities with the technology they need for impactful change.</p>
+      
+        <h2>Why <span>RecycleBase</span>?</h2>
+        <p>By using <span>RecyclaBase</span>, you're part of a movement for positive change. Our tools 
+          inspire sustainable habits and engage communities in meaningful environmental action. 
+          Together, we can make a difference, one step at a time.</p>
+      </div>
+      
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
